@@ -11,6 +11,10 @@ Additional functionalities to add (With more time):
 
 # Add a DatePicker, for example
 
+# Store the file in S3/or another cloud storage provider
+
+# Store the fields in a db
+
 In order to test this codebase, run the following commands:
 
 cd front-end
