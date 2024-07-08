@@ -15,6 +15,7 @@ interface FieldScore {
   confidenceScore: string;
   field: string;
 }
+const SERVER_URL = import.meta.env.VITE_SERVER_URL;
 
 const fileTypes = ["JPG", "PNG", "PDF"];
 
@@ -24,13 +25,10 @@ export default function PassportForm() {
 
   const { mutate, isSuccess, isError, data, error, isPending } = useMutation({
     mutationFn: async (formData: FormData) => {
-      const response = await fetch(
-        "http://localhost:3000/verify-passport-details/",
-        {
-          method: "POST",
-          body: formData,
-        }
-      );
+      const response = await fetch(`${SERVER_URL}/verify-passport-details/`, {
+        method: "POST",
+        body: formData,
+      });
       if (!response.ok) {
         const errorMessage = await response.json();
         throw new Error(errorMessage.message);

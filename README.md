@@ -20,9 +20,15 @@ In order to test this codebase, run the following commands:
 cd front-end
 npm install
 npm run dev
+.env variables
+SERVER_URL = ENTER SERVER_URL HERE
 
 For the backend, you need to do
 
 cd backend
 npm install
 npm run dev
+.env variables
+AWS_SECRET_ACCESS_KEY=
+AWS_ACCESS_KEY_ID=
+AWS_REGION=
